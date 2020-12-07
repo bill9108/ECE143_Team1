@@ -1,8 +1,9 @@
-# ECE143_Team1
+# ECE143_Team 1: Yelp Data Exploration and Analysis
 
-Original Yelp Dataset: https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_user.json
-Cleaned datset:
-Business dataset here in the repo.
-Checkin datset - https://drive.google.com/file/d/1LQR2OgaD6yWShFMQsm0CblQbGj9e-r4q/view?usp=sharing
-Review dataset - 
-User dataset is the same as the original one.
+## Original Yelp Dataset: 
+https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_user.json
+## Used datset:
+ - Business dataset here in the repo.
+ - Checkin datset - https://drive.google.com/file/d/1LQR2OgaD6yWShFMQsm0CblQbGj9e-r4q/view?usp=sharing
+ - Review dataset - 
+ - User dataset is the same as the original one.
