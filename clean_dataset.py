@@ -14,8 +14,8 @@ def clean_dataset (path, outPath, dataset, cleaned_business = None):
 
     assert(isinstance(path, str) and len(path) > 0)
     assert(isinstance(outPath, str) and len(outPath) > 0)
-    assert(isinstance(dataset, str) and dataset == 'business' or dataset == 'review')
-    assert(dataset != 'review' or (dataset == 'review' and isinstance(cleaned_business, str) and len(clean_dataset) > 0))
+    assert(isinstance(dataset, str) and dataset == 'business' or dataset == 'review' or dataset == 'checkin')
+    assert(dataset != 'review' or (dataset == 'review' or dataset == 'checkin' and ( isinstance(cleaned_business, str) and len(clean_dataset) > 0)))
 
     if dataset == 'business':
         df = pd.read_json(path, lines=True)
@@ -49,4 +49,20 @@ def clean_dataset (path, outPath, dataset, cleaned_business = None):
 
         f = open (outPath, 'w')
         review.to_json(path_or_buf=f)
+        f.close()
+
+    elif dataset == 'checkin':
+        bus = pd.read_json(cleaned_business, encoding='utf8')
+        busId = np.array(bus['business_id'])
+        checkin = pd.read_json(path, lines=True)
+        
+        discard = list()
+        for i in checkin.index:
+            if checkin.loc[i].business_id not in busId:
+                discard.append(i)
+
+        checkin.drop(discard, inplace=True)
+        
+        f = open (outPath, 'w')
+        checkin.to_json(path_or_buf=f)
         f.close()
