@@ -116,7 +116,6 @@ def count_cuisine_yearly_num_review(cuisine_dict, review, cuisines, year):
         else:
             count[c] = 0
         
-
     for i in range(len(review)):
         row = review.iloc[i]
         business = row.business_id
@@ -124,9 +123,11 @@ def count_cuisine_yearly_num_review(cuisine_dict, review, cuisines, year):
             continue
         for c in cuisines:
             if c == 'Pizza':
-                c = '(Non-Italian) Pizza'
-            if business in cuisine_dict[c]:
-                count[c] = count[c] + 1
+                if business in cuisine_dict[c]:
+                    count['(Non-Italian) Pizza'] = count['(Non-Italian) Pizza'] + 1
+            else:
+                if business in cuisine_dict[c]:
+                    count[c] = count[c] + 1
 
     del (count['Fast Food'])
     del (count['Bars'])
