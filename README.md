@@ -12,12 +12,4 @@ https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_us
 NumPy, Pandas, Matplotlib, -- Add more here!
 
 ## Instruction
-To run this project, first download all the used datasets listed above and put them in the same
-
-directory as the modules and the main notebook are in. Resolve any dependency requirement as
-
-well. Then simply open the main.ipynb notebok and run each cell. The sequence of running does
-
-not matter across each type of charts, but the cells generating a single type of charts must be
-
-run sequencially. 
+To run this project, first download all the used datasets listed above and put them in the samedirectory as the modules and the main notebook are in. Resolve any dependency requirement as well. Then simply open the main.ipynb notebok and run each cell. The sequence of running does not matter across each type of charts, but the cells generating a single type of charts must be run sequencially. 
