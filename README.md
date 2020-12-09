@@ -7,6 +7,6 @@ https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_us
  - Checkin datset - https://drive.google.com/file/d/1LQR2OgaD6yWShFMQsm0CblQbGj9e-r4q/view?usp=sharing
  - Review dataset - https://drive.google.com/file/d/1ivu6Kf0XddJXJxnuzBqt3ZTIFoUmWlr8/view?usp=sharing
  - User dataset is the same as the original one.
-## Dependencies
+## 3rd-Party Dependencies
 
-NumPy, Pandas, Matplotlib, json,  -- Add more here!
+NumPy, Pandas, Matplotlib, -- Add more here!
