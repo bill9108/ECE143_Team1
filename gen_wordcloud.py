@@ -51,4 +51,5 @@ def generate_wordcloud (business, reviews, star, max_words):
     wordcloud = WordCloud(width = 800, height = 800, background_color ='white', 
                       stopwords = stopwords, min_font_size = 10, max_words=max_words).generate(all_reviews) 
     plt.figure(figsize = (10, 10), dpi = 200) 
+    plt.title("Wordcloud for Businesses with " + str(star) + " Stars", fontsize=20)
     plt.imshow(wordcloud) 
