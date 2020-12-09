@@ -5,10 +5,10 @@ import numpy as np
 import math
 import json
 
-def attribut(business_dir):
+def attribut(business):
     #a = pd.read_json('/home/notebook/data/group/liziwen/ECE143/Yelp_dataset_checkin_clean.json')
     #b = pd.read_json('/home/notebook/data/group/liziwen/ECE143/Yelp_dataset_review_clean.json')
-    c = pd.read_json(business_dir)
+    c = business_dir
     #d = pd.read_json('/home/notebook/data/group/liziwen/ECE143/yelp_academic_dataset_user.json')
     attribute = c['attributes']
     star = c['stars']
@@ -80,8 +80,8 @@ def attribut(business_dir):
     plt.ylabel('star')
     plt.title('Star from users in terms of some attributes')
 
-def review_time(review_dir):
-    b = pd.read_json(review_dir)
+def review_time(review):
+    b =review
     time = b['date']
     month_yr = {}
     for index, value in time.items():
@@ -136,8 +136,8 @@ def review_time(review_dir):
     plt.ylabel('Reviews')
     plt.xlabel('time(year/month)')
 
-def reviwer_weight(user_dir,save_dir):
-    d = pd.read_json(user_dir, lines=True)
+def reviwer_weight(user,save_dir):
+    d = user
     use_time = d['yelping_since']
     review_count = d['review_count']
     useful = d['useful']
