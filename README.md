@@ -9,4 +9,4 @@ https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_us
  - User dataset is the same as the original one.
 ## Dependencies
 
-NumPy, Pandas, Matplotlib, -- Add more here!
+NumPy, Pandas, Matplotlib, json,  -- Add more here!
