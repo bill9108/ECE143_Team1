@@ -13,3 +13,6 @@ NumPy, Pandas, Matplotlib, -- Add more here!
 
 ## Instruction
 To run this project, first download all the used datasets listed above and put them in the same directory as the modules and the main notebook are in. Resolve any dependency requirement as well. Then simply open the main.ipynb notebok and run each cell. The sequence of running does not matter across each type of charts, but the cells generating a single type of charts must be run sequencially. 
+
+## File Structure
+The file structure of this project is straightfowrad. All the visualizations can be found under the Visualization directory. Those unused or deprecated is in the Unused sub-directory. The wordclouds are in a single sub-directory. Other than that, all the modules, the main notebook, and the PDF version of the slides are on the top level of the repo. 
