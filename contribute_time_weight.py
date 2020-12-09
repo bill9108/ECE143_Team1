@@ -80,7 +80,7 @@ def attribut(business_dir):
     plt.ylabel('star')
     plt.title('Star from users in terms of some attributes')
 
-def time(review_dir):
+def review_time(review_dir):
     b = pd.read_json(review_dir)
     time = b['date']
     month_yr = {}
