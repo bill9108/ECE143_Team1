@@ -116,11 +116,10 @@ def count_cuisine_yearly_num_review(cuisine_dict, review, cuisines, year):
         else:
             count[c] = 0
         
-    for i in range(len(review)):
+    review_yr = review.groupby(review.date.dt.year).get_group(year)
+    for i in range(len(review_yr)):
         row = review.iloc[i]
         business = row.business_id
-        if (row.date.year != year):
-            continue
         for c in cuisines:
             if c == 'Pizza':
                 if business in cuisine_dict[c]:
