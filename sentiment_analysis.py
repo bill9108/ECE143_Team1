@@ -35,10 +35,10 @@ def polarity(business, review, star):
                 polarity.append(blob.sentiment.polarity)
             if len(polarity)!=0:
                 hh.append(sum(polarity)/len(polarity))
-    avg_polarity.append(sum(hh)/len(hh))
-    trace=go.Scatter(x=np.linspace(0,len(hh),num=len(hh)),y=hh,line_shape='spline',name='{} star'.format(str(star[i])))
-    fig2.add_trace(trace)
-    fig2.update_layout(title="Polarity of Reviews with Different Ratings",title_x=0.5,title_font_size=25,xaxis_title='i\'th restaurant',yaxis_title='Polarity')
+        avg_polarity.append(sum(hh)/len(hh))
+        trace=go.Scatter(x=np.linspace(0,len(hh),num=len(hh)),y=hh,line_shape='spline',name='{} star'.format(str(star[i])))
+        fig2.add_trace(trace)
+        fig2.update_layout(title="Polarity of Reviews with Different Ratings",title_x=0.5,title_font_size=25,xaxis_title='i\'th restaurant',yaxis_title='Polarity')
     fig2.show()
 
 
@@ -67,7 +67,7 @@ def subjectivity(business,review,star):
         trace=go.Scatter(x=np.linspace(0,len(hhh),num=len(hhh)),y=hhh,line_shape='spline',name='{} star'.format(str(star[i])))
         fig1.add_trace(trace)
         fig1.update_layout(title="subjectivity of different star rate",title_x=0.5,xaxis_title='i\'th of restaurants',yaxis_title='subjectivity')
-        fig1.show()
+    fig1.show()
 
 
 
